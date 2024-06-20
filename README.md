@@ -143,7 +143,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 For any questions or suggestions, please open an issue or contact the repository owner.
 
-```
+
 
 Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and repository name. This README file provides a comprehensive overview of the project, installation instructions, usage guidelines, and contribution information.# Getting Started with Create React App
 
