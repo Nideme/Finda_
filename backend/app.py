@@ -13,9 +13,9 @@ from nltk.tokenize import word_tokenize
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 
-# Google API details
-GOOGLE_API_KEY = 'GOOGLE_API_KEY'
-SEARCH_ENGINE_ID = 'SEARCH_ENGINE_ID'
+# Initialize GOOGLE API
+GOOGLE_API_KEY = api_key=os.environ.get("GOOGLE_API_KEY")
+SEARCH_ENGINE_ID = api_key=os.environ.get("SEARCH_ENGINE_ID")
 
 app = Flask(__name__, static_folder='../frontend/build', static_url_path='')
 app.config['SECRET_KEY'] = 'supersecretkey'  # Replace with a strong secret key
@@ -99,8 +99,8 @@ def extract_keywords(text):
 
 
 def search_google(keywords):
-    api_key = 'api_key'
-    search_engine_id = 'cx'
+    api_key = GOOGLE_API_KEY
+    search_engine_id = SEARCH_ENGINE_ID
     query = ''.join(keywords)
     url = f'https://www.googleapis.com/customsearch/v1?q={query}&key={api_key}&cx={search_engine_id}'
     print(f"Google search URL: {url}") 
